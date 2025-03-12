@@ -67,6 +67,8 @@ function Clear()
 }
 
 
+
+
 //-----------------------------------------------------------------------------
 // Name: Igual()
 // Desc: Resultado da operação.
@@ -76,6 +78,8 @@ function Igual()
     g_inputAtual = document.getElementById('input').innerHTML;
     document.getElementById('input').innerHTML = eval(g_inputAtual);
 }
+
+
 
 
 //-----------------------------------------------------------------------------
