@@ -5,22 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora iPhone</title>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <script src="script.js"></script> 
 </head>
 <body>
     <h1> Calculadora iPhone</h1>
+    <p>By: Fernando Acauan</p>
     <div class="calculadora">
-    <div class="tela">
-        <h1>0</h1>
+        <div class="tela">
+            <div id="input">
+                0
+            </div>
     </div>
         <!-----------------------------------
         <! Buttons
         <!---------------------------------->
-        <button class="button" id="ac">AC</button>
+        <button class="button" id="ac" onclick="Clear()">AC</button>
         <button class="button">+/-</button>
         <button class="button" id="porcentagem">%</button>
         <button class="operacoes">÷</button>
         <br>
-        <button class="numerico">7</button>
+        <button class="numerico" onclick="Append('7')">7</button>
         <button class="numerico">8</button>
         <button class="numerico">9</button>
         <button class="operacoes">x</button>
@@ -33,7 +37,7 @@
         <button class="numerico">1</button>
         <button class="numerico">2</button>
         <button class="numerico">3</button>
-        <button class="operacoes">+</button>
+        <button class="operacoes" onclick="Somar()">+</button>
         <br>
         <button class="numerico" id="zero">0</button>
         <button class="numerico">,</button>

@@ -7,28 +7,46 @@
 //-----------------------------------------------------------------------------
 
 
+let g_inputAtual = '';
+let g_operacaoAtual = '';
+let g_operacaoAnterior = '';
 
 
 //-----------------------------------------------------------------------------
-// Name: Add()
-// Desc: Adiciona dois números inteiros.
+// Name: Append()
+// Desc: Junta dois números.
 //-----------------------------------------------------------------------------
-function Add(iNumber, iNumberTwo)
+function Append(iNumber)
 {
-    return iNumber + iNumberTwo;
+    g_inputAtual += iNumber;
+    document.getElementById('input').innerHTML = `${g_operacaoAnterior} ${g_operacaoAtual} ${g_inputAtual}`;
 }
 
 
 
 
+//-----------------------------------------------------------------------------
+// Name: Somar()
+// Desc: Adiciona o botão de soma.
+//-----------------------------------------------------------------------------
+function Somar()
+{
+    
+}
+
+
+
 
 //-----------------------------------------------------------------------------
-// Name: Sub()
-// Desc: Subtrai dois números inteiros.
+// Name: Clear()
+// Desc: Limpa o display.
 //-----------------------------------------------------------------------------
-function Sub(iNumber, iNumberTwo)
+function Clear()
 {
-    return iNumber - iNumberTwo;
+    g_inputAtual = '';
+    document.getElementById('input').innerHTML='0';
 }
+
+
 
 
