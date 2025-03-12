@@ -46,10 +46,25 @@ body
   display: inline-block;
   margin: 4px 2px;
   border-radius: 50%;
-  background-color: rgb(165,165,165);
-  color: rgb(51,51,51);
+  background-color: rgb(92,91,96);
+  color: white;
   font-size: 50px;
 }
+
+
+/* 
+
+rgb(140,140,140) - rgb(226,226,226) - AC   rgb(92,91,96)
+rgb(114,114,114) - rgb(220,220,220) -  7
+rgb(251,199,141) - rgb(254,241,225) - op
+*/
+
+.button:hover
+{
+  background-color: rgb(140,140,140);
+  color: rgb(226,226,226);
+}
+
 
 
 .operacoes
@@ -69,6 +84,14 @@ body
   font-size: 50px;
 }
 
+
+.operacoes:hover
+{
+  background-color: rgb(251,199,141);
+  color: rgb(254,241,225);
+}
+
+
 .numerico
 {
   border: none;
@@ -84,6 +107,13 @@ body
   background-color: rgb(51,51,51);
   color: rgb(253,253,253);
   font-size: 50px;
+}
+
+
+.numerico:hover
+{
+  background-color: rgb(114,114,114);
+  color: rgb(220,220,220);
 }
 
 
