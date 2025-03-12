@@ -18,7 +18,7 @@ let g_inputAtual = '';
 //-----------------------------------------------------------------------------
 function Append(iNumber)
 {
-    let iNum = iNumber & 0xF;
+    let iNum = iNumber;
 
     if(document.getElementById("input").innerHTML === '0')
     {
@@ -67,7 +67,10 @@ function Clear()
 }
 
 
-
+//-----------------------------------------------------------------------------
+// Name: Igual()
+// Desc: Resultado da operação.
+//-----------------------------------------------------------------------------
 function Igual()
 {
     g_inputAtual = document.getElementById('input').innerHTML;
