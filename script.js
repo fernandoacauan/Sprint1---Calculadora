@@ -18,11 +18,11 @@ let g_inputAtual = '';
 //-----------------------------------------------------------------------------
 function Append(iNumber)
 {
-    let num = iNumber & 0xF;
+    let iNum = iNumber & 0xF;
 
     if(document.getElementById("input").innerHTML === '0')
     {
-        document.getElementById('input').innerHTML = num;
+        document.getElementById('input').innerHTML = iNum;
         return;
     }
     
@@ -33,7 +33,7 @@ function Append(iNumber)
     }
 
 
-    document.getElementById('input').innerHTML += num;
+    document.getElementById('input').innerHTML += iNum;
 }
 
 

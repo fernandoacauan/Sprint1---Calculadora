@@ -7,12 +7,12 @@
     <link rel="stylesheet" type="text/css" href="styles.css"/>
     <script src="script.js"></script> 
 </head>
-<body>
+<body onload="Clear()">
     <h1> Calculadora iPhone</h1>
     <p>By: Fernando Acauan</p>
     <div class="calculadora">
         <div class="tela">
-            <div id="input">
+            <div id="input"> 
                 0
             </div>
     </div>
@@ -40,7 +40,7 @@
         <button class="operacoes" onclick="AppendOperation('+')">+</button>
         <br>
         <button class="numerico" id="zero" onclick="Append('0')">0</button>
-        <button class="numerico">,</button>
+        <button class="numerico" onclick="Append(',')">,</button>
         <button class="operacoes" onclick="Igual()">=</button>
     </div>
 
