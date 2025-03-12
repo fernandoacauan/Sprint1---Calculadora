@@ -78,4 +78,14 @@ function Igual()
 }
 
 
+//-----------------------------------------------------------------------------
+// Name: Inverter()
+// Desc: Inverte o sinal.
+//-----------------------------------------------------------------------------
+function Inverter()
+{
+    document.getElementById('input').innerHTML *= -1;
+}
+
+
 
