@@ -21,27 +21,27 @@
         <!---------------------------------->
         <button class="button" id="ac" onclick="Clear()">AC</button>
         <button class="button">+/-</button>
-        <button class="button" id="porcentagem">%</button>
-        <button class="operacoes">÷</button>
+        <button class="button" id="porcentagem" onclick="AppendOperation('%')">%</button>
+        <button class="operacoes" onclick="AppendOperation('/')">÷</button>
         <br>
         <button class="numerico" onclick="Append('7')">7</button>
-        <button class="numerico">8</button>
-        <button class="numerico">9</button>
-        <button class="operacoes">x</button>
+        <button class="numerico" onclick="Append('8')">8</button>
+        <button class="numerico" onclick="Append('9')">9</button>
+        <button class="operacoes" onclick="AppendOperation('*')">x</button>
         <br>
-        <button class="numerico">4</button>
-        <button class="numerico">5</button>
-        <button class="numerico">6</button>
-        <button class="operacoes">-</button>
+        <button class="numerico" onclick="Append('4')">4</button>
+        <button class="numerico" onclick="Append('5')">5</button>
+        <button class="numerico" onclick="Append('6')">6</button>
+        <button class="operacoes" onclick="AppendOperation('-')">-</button>
         <br>
-        <button class="numerico">1</button>
-        <button class="numerico">2</button>
-        <button class="numerico">3</button>
-        <button class="operacoes" onclick="Somar()">+</button>
+        <button class="numerico" onclick="Append('1')">1</button>
+        <button class="numerico" onclick="Append('2')">2</button>
+        <button class="numerico" onclick="Append('3')">3</button>
+        <button class="operacoes" onclick="AppendOperation('+')">+</button>
         <br>
-        <button class="numerico" id="zero">0</button>
+        <button class="numerico" id="zero" onclick="Append('0')">0</button>
         <button class="numerico">,</button>
-        <button class="operacoes">=</button>
+        <button class="operacoes" onclick="Igual()">=</button>
     </div>
 
     </div>

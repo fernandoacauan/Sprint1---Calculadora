@@ -8,8 +8,8 @@
 
 
 let g_inputAtual = '';
-let g_operacaoAtual = '';
-let g_operacaoAnterior = '';
+
+
 
 
 //-----------------------------------------------------------------------------
@@ -18,20 +18,39 @@ let g_operacaoAnterior = '';
 //-----------------------------------------------------------------------------
 function Append(iNumber)
 {
-    g_inputAtual += iNumber;
-    document.getElementById('input').innerHTML = `${g_operacaoAnterior} ${g_operacaoAtual} ${g_inputAtual}`;
+    let num = iNumber & 0xF;
+
+    if(document.getElementById("input").innerHTML === '0')
+    {
+        document.getElementById('input').innerHTML = num;
+        return;
+    }
+    
+    
+    if(g_inputAtual.length >= 12)
+    {
+        return;
+    }
+
+
+    document.getElementById('input').innerHTML += num;
 }
 
 
 
 
 //-----------------------------------------------------------------------------
-// Name: Somar()
-// Desc: Adiciona o botão de soma.
+// Name: AppendOperation()
+// Desc: Acrescenta um sinal de operação.
 //-----------------------------------------------------------------------------
-function Somar()
+function AppendOperation(strOperator)
 {
-    
+    if(strOperator === '.')
+    {
+        document.getElementById("input").innerHTML += strOperator;
+        return;    
+    }   
+    document.getElementById("input").innerHTML += ' ' + strOperator + ' ';    
 }
 
 
@@ -47,6 +66,13 @@ function Clear()
     document.getElementById('input').innerHTML='0';
 }
 
+
+
+function Igual()
+{
+    g_inputAtual = document.getElementById('input').innerHTML;
+    document.getElementById('input').innerHTML = eval(g_inputAtual);
+}
 
 
 
