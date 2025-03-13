@@ -38,7 +38,6 @@ function Append(iNumber)
 
 
 
-
 //-----------------------------------------------------------------------------
 // Name: AppendOperation()
 // Desc: Acrescenta um sinal de operação.
