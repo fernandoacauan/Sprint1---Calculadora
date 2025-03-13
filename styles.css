@@ -25,7 +25,8 @@ body
 
 .grid
 {
-   display: block;
+   display: inline-flex;
+   flex-wrap: wrap;
 }
 
 
@@ -100,7 +101,7 @@ body
 /*-----------------------------------------------------------------------------
  *                                 SMARTPHONE
  *----------------------------------------------------------------------------*/
- @media screen and (max-width: 720px) and (max-height:2560px)
+ @media screen and (min-width:768px) and (max-height:900px)
  {
 
    body
@@ -121,12 +122,11 @@ body
   
   .grid .button
   {
-    font-size: 40px;
     border-radius: 50px;
     text-align: center;
-    padding-left: 25px;
+    padding-left: 40px;
     border-radius: 50px;
-    width: 100px;
+    width: 200px;
     height: 100px;
   }
   
@@ -137,7 +137,7 @@ body
     text-align: center;
     padding-left: 40px;
     border-radius: 50px;
-    width: 100px;
+    width: 200px;
     height: 100px;
   }
   
@@ -149,7 +149,7 @@ body
     text-align: center;
     padding-left: 40px;
     border-radius: 50px;
-    width: 100px;
+    width: 200px;
     height: 100px;
   
   }
@@ -160,10 +160,13 @@ body
       text-align: center;
       padding-left: 40px;
       border-radius: 50px;
-      width: 100px;
+      width: 409px;
       height: 100px;
   }
   
+
+
+
 
 
  }
