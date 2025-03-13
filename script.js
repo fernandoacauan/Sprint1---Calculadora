@@ -45,12 +45,12 @@ function Append(iNumber)
 //-----------------------------------------------------------------------------
 function AppendOperation(strOperator)
 {
-    if(strOperator === '.')
-    {
-        document.getElementById("input").innerHTML += strOperator;
-        return;    
-    }   
-    document.getElementById("input").innerHTML += ' ' + strOperator + ' ';    
+    let input = document.getElementById('input').innerHTML;
+
+    if("+-*/.".includes(input.slice(-1))) return;
+
+
+    document.getElementById("input").innerHTML += strOperator;    
 }
 
 
