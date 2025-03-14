@@ -7,100 +7,118 @@
 *******************************************************************************/
 
 
-body
-{
-    background-color: white;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-}
+
+
 
 
 
 /*-----------------------------------------------------------------------------
  *                                 TABLET
  *----------------------------------------------------------------------------*/
-@media screen and (min-width: 768px) and (max-width: 1023px)
-{
 
-.grid
-{
-   display: inline-flex;
-   flex-wrap: wrap;
-}
-
-
-
-.calculadora
-{
-    padding-bottom: auto;
-    height: auto;
-    width: auto;
-    background-color: black;
-    color: white;
+ @media screen and (max-width: 1023px) 
+ {
+  body 
+  {
+    background-color: #eee;
+    color: black;
+    margin: 20px auto;
     font-family: Arial, Helvetica, sans-serif;
-    margin-right: 0%;
-    margin-left: -1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid 
+  {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .calculadora 
+  {
+    max-width: 320px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: black;
+    box-shadow: 0 0 30px blue;
+  }
+
+  .tela {
+    background-color: black;
+    padding: 20px;
+    text-align: right;
+    color: white;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .button,
+  .operacoes,
+  .numerico 
+  {
+    width: 70px;
+    height: 70px;
+    padding: 15px;
+    font-size: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    border: none;
+  }
+
+
+  .button
+  {
+    background-color: rgb(92,91,96);
+    color: white;
+  }
+
+  .button:hover {
+    background-color: rgb(140, 140, 140);
+    color: rgb(226, 226, 226);
+  }
+
+  .operacoes {
+    background-color: rgb(243, 175, 84);
+    color: rgb(253, 253, 253);
+  }
+
+  .operacoes:hover {
+    background-color: rgb(251, 199, 141);
+    color: rgb(254, 241, 225);
+  }
+
+  .numerico {
+    background-color: rgb(51, 51, 51);
+    color: rgb(253, 253, 253);
+  }
+
+  .numerico:hover {
+    background-color: rgb(114, 114, 114);
+    color: rgb(220, 220, 220);
+  }
+
+  #zero.numerico {
+    text-align: left;
+    padding-left: 20px;
+    border-radius: 35px;
+    width: 150px;
+    height: 70px;
+  }
+
+  #input {
+    font-size: 50px;
+  }
 }
-
-body
-{
-  background-color: black;
-  color: white;
-}
-
-.grid .button
-{
-  border-radius: 50px;
-  text-align: center;
-  padding-left: 40px;
-  border-radius: 50px;
-  width: 200px;
-  height: 100px;
-}
-
-.grid .numerico
-{
-  border-radius: 50px;
-  width: 200px;
-  text-align: center;
-  padding-left: 40px;
-  border-radius: 50px;
-  width: 200px;
-  height: 100px;
-}
-
-
-.grid .operacoes
-{
-  border-radius: 50px;
-  width: 200px;
-  text-align: center;
-  padding-left: 40px;
-  border-radius: 50px;
-  width: 200px;
-  height: 100px;
-
-}
-
-
-.grid #zero.numerico
-{
-    text-align: center;
-    padding-left: 40px;
-    border-radius: 50px;
-    width: 409px;
-    height: 100px;
-}
-
-
-}
-
-
 
 /*-----------------------------------------------------------------------------
  *                                 SMARTPHONE
  *----------------------------------------------------------------------------*/
+ 
+ /*
  @media screen and (min-width:768px) and (max-height:900px)
  {
 
@@ -170,7 +188,7 @@ body
 
 
  }
-
+*/
 
 
 
@@ -179,124 +197,147 @@ body
 /*-----------------------------------------------------------------------------
  *                                 DESKTOP
  *----------------------------------------------------------------------------*/
-@media screen and (min-width:1024px)
+@media screen and (min-width: 1024px)
 {
-   .calculadora
-   {
-      height: auto;
-      width: 440px;
-      background-color: black;
-      color: white;
-      font-family: Arial, Helvetica, sans-serif;
-   }
-}
+  body
+  {
+    background-color: #eee;
+    color: black;
+    margin: 50px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid 
+  {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-left: 10px;
+  }
+
+
+  /*@media screen and (min-width:1024px)
+  {*/
+    .calculadora
+    {
+      width: 450px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: black;
+      box-shadow: 0 0 50px blue;
+    }
+  /*}*/
 
 
 
-.tela
-{
-    padding-top: 100px;
-    padding-right: 50px;
+  .tela
+  {
+    background-color: black;
+    padding: 40px;
     text-align: right;
-    font-size: 50px;
     color: white;
-}
+    font-size: 2.5em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
 
-.button
-{
-  width: 100px;
-  border: none;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
-  border-radius: 50%;
-  background-color: rgb(92,91,96);
-  color: white;
-  font-size: 50px;
-}
+  .button
+  {
+    width: 100px;
+    border: none;
+    padding: 20px;
+    text-align: center;
+    margin: 4px 2px;
+    border-radius: 50%;
+    background-color: rgb(92,91,96);
+    color: white;
+    font-size: 50px;
+
+  }
 
 
-/* 
+  /* 
 
-rgb(140,140,140) - rgb(226,226,226) - AC   rgb(92,91,96)
-rgb(114,114,114) - rgb(220,220,220) -  7
-rgb(251,199,141) - rgb(254,241,225) - op
-*/
+  rgb(140,140,140) - rgb(226,226,226) - AC   rgb(92,91,96)
+  rgb(114,114,114) - rgb(220,220,220) -  7
+  rgb(251,199,141) - rgb(254,241,225) - op
+  */
 
-.button:hover
-{
-  background-color: rgb(140,140,140);
-  color: rgb(226,226,226);
-}
-
-
-
-.operacoes
-{
-  border: none;
-  width: 100px;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
-  font-size: 50px;
-  border-radius: 50%;
-  aspect-ratio: 1;
-  background-color: rgb(243,175,84);
-  color: rgb(253,253,253);
-  font-size: 50px;
-}
+  .button:hover
+  {
+    background-color: rgb(140,140,140);
+    color: rgb(226,226,226);
+  }
 
 
-.operacoes:hover
-{
-  background-color: rgb(251,199,141);
-  color: rgb(254,241,225);
-}
+
+  .operacoes
+  {
+    border: none;
+    width: 100px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    font-size: 50px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    background-color: rgb(243,175,84);
+    color: rgb(253,253,253);
+    font-size: 50px;
+  }
 
 
-.numerico
-{
-  border: none;
-  width: 100px;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
-  font-size: 50px;
-  border-radius: 50%;
-  aspect-ratio: 1;
-  background-color: rgb(51,51,51);
-  color: rgb(253,253,253);
-  font-size: 50px;
-}
+  .operacoes:hover
+  {
+    background-color: rgb(251,199,141);
+    color: rgb(254,241,225);
+  }
 
 
-.numerico:hover
-{
-  background-color: rgb(114,114,114);
-  color: rgb(220,220,220);
-}
+  .numerico
+  {
+    border: none;
+    width: 100px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    font-size: 50px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    background-color: rgb(51,51,51);
+    color: rgb(253,253,253);
+    font-size: 50px;
+  }
 
 
-#zero.numerico
-{
-    text-align: left;
-    padding-left: 40px;
-    border-radius: 50px;
-    width: 210px;
-    height: 100px;
-}
+  .numerico:hover
+  {
+    background-color: rgb(114,114,114);
+    color: rgb(220,220,220);
+  }
 
 
-#input
-{
-  font-size: 70px;
+  #zero.numerico
+  {
+      text-align: left;
+      padding-left: 40px;
+      border-radius: 50px;
+      width: 210px;
+      height: 100px;
+  }
+
+
+  #input
+  {
+    font-size: 70px;
+  }
 }
 
 

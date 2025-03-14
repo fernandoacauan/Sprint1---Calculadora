@@ -92,3 +92,26 @@ function Inverter()
 
 
 
+
+//-----------------------------------------------------------------------------
+// Name: PlaySoundClick()
+// Desc: Toca o .WAV de click.
+//-----------------------------------------------------------------------------
+function PlaySoundClick() 
+{
+    const kButtons = document.querySelectorAll("button", "numerico", "operacoes");
+    const kAudio = document.getElementById("click");
+
+    kButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            kAudio.currentTime = 0;
+            kAudio.play();
+        });
+    });
+}
+
+
+document.addEventListener("DOMContentLoaded", PlaySoundClick);
+
+
+

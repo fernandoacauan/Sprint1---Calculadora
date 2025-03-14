@@ -1,5 +1,12 @@
+<!-----------------------------------------------------------------------------
+<! File: index.html
+<!
+<! Desc: Página inicial.
+<!
+<! Copyright (c) Fernando Acauan. All rights reserved.
+<!---------------------------------------------------------------------------->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,43 +15,54 @@
     <script src="script.js"></script> 
 </head>
 <body onload="Clear()">
-    <h1> Calculadora iPhone</h1>
-    <p>By: Fernando Acauan</p>
-<section class="borda">
-    <div class="calculadora">
-        <div class="tela">
-            <div id="input"> 
-                0
-            </div>
+    <header>
+        <h1> Calculadora iPhone</h1>
+        <p>By: Fernando Acauan</p>
+    </header>
+
+
+
+    <main>
+    <section class="borda">
+        <div class="calculadora">
+            <div class="tela">
+                <div id="input"> 
+                    0
+                </div>
+        </div>
+    <div class="grid">
+            <!-----------------------------------
+            <! Buttons
+            <!---------------------------------->
+            <button class="button" id="ac" onclick="Clear()">AC</button>
+            <button class="button" onclick="Inverter()">+/-</button>
+            <button class="button" id="porcentagem" onclick="AppendOperation('%')">%</button>
+            <button class="operacoes" onclick="AppendOperation('/')">÷</button>
+
+            <button class="numerico" onclick="Append('7')">7</button>
+            <button class="numerico" onclick="Append('8')">8</button>
+            <button class="numerico" onclick="Append('9')">9</button>
+            <button class="operacoes" onclick="AppendOperation('*')">x</button>
+            
+            <button class="numerico" onclick="Append('4')">4</button>
+            <button class="numerico" onclick="Append('5')">5</button>
+            <button class="numerico" onclick="Append('6')">6</button>
+            <button class="operacoes" onclick="AppendOperation('-')">-</button>
+            
+            <button class="numerico" onclick="Append('1')">1</button>
+            <button class="numerico" onclick="Append('2')">2</button>
+            <button class="numerico" onclick="Append('3')">3</button>
+            <button class="operacoes" onclick="AppendOperation('+')">+</button>
+            
+            <button class="numerico" id="zero" onclick="Append('0')">0</button>
+            <button class="numerico" onclick="Append('.')">,</button>
+            <button class="operacoes" onclick="Igual()">=</button>
     </div>
-<div class="grid">
-        <!-----------------------------------
-        <! Buttons
-        <!---------------------------------->
-        <button class="button" id="ac" onclick="Clear()">AC</button>
-        <button class="button" onclick="Inverter()">+/-</button>
-        <button class="button" id="porcentagem" onclick="AppendOperation('%')">%</button>
-        <button class="operacoes" onclick="AppendOperation('/')">÷</button>
-        <br>
-        <button class="numerico" onclick="Append('7')">7</button>
-        <button class="numerico" onclick="Append('8')">8</button>
-        <button class="numerico" onclick="Append('9')">9</button>
-        <button class="operacoes" onclick="AppendOperation('*')">x</button>
-        <br>
-        <button class="numerico" onclick="Append('4')">4</button>
-        <button class="numerico" onclick="Append('5')">5</button>
-        <button class="numerico" onclick="Append('6')">6</button>
-        <button class="operacoes" onclick="AppendOperation('-')">-</button>
-        <br>
-        <button class="numerico" onclick="Append('1')">1</button>
-        <button class="numerico" onclick="Append('2')">2</button>
-        <button class="numerico" onclick="Append('3')">3</button>
-        <button class="operacoes" onclick="AppendOperation('+')">+</button>
-        <br>
-        <button class="numerico" id="zero" onclick="Append('0')">0</button>
-        <button class="numerico" onclick="Append('.')">,</button>
-        <button class="operacoes" onclick="Igual()">=</button>
-</div>
-</section>
+    </section>
+</main>
+
+<audio id="click" src="audio/snd_category_decide.wav" preload="auto"></audio>
+
+
 </body>
 </html>
